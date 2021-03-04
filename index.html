@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+	<link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Animate CSS-->
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+        <div class="container">
+            <div class="main bg-dark">
+                <div class="headTab" class="headTab">
+                    <p class="hist" id="hist">0</p>
+                    <div class="flex-container">
+                        <p class="eqSign" id="eqSign">=</p>
+                        <p class="ans" id="ans">0</p>   
+                    </div>
+                    <input type="text" size="26px" placeholder="0" value="" id="result">
+                </div>
+                <div class="center">
+                    <button class="btn btn-dark clearBtn btnClr" onclick="clearAll()">C</button>
+                    <button class="btn btn-dark clearElBtn btnClr" onclick="clearEl()"><i class="fas fa-backspace"></i></button>
+                </div>
+
+                <div class="center">
+                    <button class="btn btn-dark num" onclick="writeNum(7)">7</button>
+                    <button class="btn btn-dark num" onclick="writeNum(8)">8</button>
+                    <button class="btn btn-dark num" onclick="writeNum(9)">9</button>
+                    <button class="btn btn-dark sign" onclick="writeNum('-')">-</button>
+                    <button class="btn btn-dark sign" onclick="writeNum('/')">/</button>
+                </div>
+
+                <div class="center">
+                    <button class="btn btn-dark num" onclick="writeNum(4)">4</button>
+                    <button class="btn btn-dark num" onclick="writeNum(5)">5</button>
+                    <button class="btn btn-dark num" onclick="writeNum(6)">6</button>
+                    <button class="btn btn-dark invisible sign">N</button>
+                    <button class="btn btn-dark sign" onclick="writeNum('%')">%</button>
+                </div>
+
+                <div class="center">
+                    <button class="btn btn-dark num" onclick="writeNum(1)">1</button>
+                    <button class="btn btn-dark num" onclick="writeNum(2)">2</button>
+                    <button class="btn btn-dark num" onclick="writeNum(3)">3</button>
+                    <button class="btn btn-dark plus" onclick="writeNum('+')">+</button>
+                    <button class="btn btn-dark sign" onclick="writeNum('x')">x</button>
+                </div>
+
+                <div class="center">
+                    <button class="btn btn-dark zeroEqual" onclick="writeNum(0)">0</button>
+                    <button class="btn btn-dark num" onclick="writeNum('.')">.</button>
+                    <button class="btn btn-dark zeroEqual eq" onclick="equalOp()">=</button>
+                </div>
+            </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
